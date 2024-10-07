@@ -12,7 +12,19 @@ O padrão Facade foi utilizado para fornecer uma interface simplificada para o s
 
 A estrutura do projeto é a seguinte:
 
-├── main.py ├── models/ │ └── market_data_model.py ├── routers/ │ └── market_data_router.py └── services/ └── market_data_service.py
+```
+├── facade
+│   └── market_data_facade.py
+├── main.py
+├── models
+│   └── market_data_model.py
+├── README.md
+├── requirements.txt
+├── routers
+│   └── market_data_router.py
+└── services
+    └── market_data_service.py
+```
 
  - **main.py**: Ponto de entrada da aplicação, onde o FastAPI é iniciado e os roteadores são incluídos.
 - **models/**: Contém as definições de modelos de dados.
@@ -35,8 +47,8 @@ Antes de executar a aplicação, certifique-se de ter os seguintes pré-requisit
 
    ```bash
    git clone https://github.com/seu-usuario/data-dashboard-app.git
-   cd data-dashboard-app` 
-   
+   cd data-dashboard-app`
+
 2.**Instale as dependências:**
 
 Utilize o `pip` para instalar as dependências necessárias. O arquivo `requirements.txt` deve conter as bibliotecas necessárias para a aplicação.
@@ -48,7 +60,7 @@ Utilize o `pip` para instalar as dependências necessárias. O arquivo `requirem
 
 Para executar a aplicação, utilize o seguinte comando:
 
-`uvicorn main:app --reload` 
+`uvicorn main:app --reload`
 
 O servidor será iniciado e estará disponível em `http://127.0.0.1:8000`.
 
@@ -73,7 +85,7 @@ Aqui está um exemplo de como você pode fazer uma requisição para obter dados
 **Requisição HTTP**:
 
 
-`GET http://127.0.0.1:8001/market-data/?period=5d` 
+`GET http://127.0.0.1:8001/market-data/?period=5d`
 
 #### 3. Resposta
 
